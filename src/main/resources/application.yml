@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:default
+    driver-class-name: org.h2.Driver
+    username: sa
+
+  jpa:
+    properties:
+      hibernate:
+        order_inserts: true
+        generate_statistics: true
+        jdbc:
+          batch-size: 100
+
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+
+  batch:
+    job:
+      enabled: false
+
+  main:
+    banner-mode: 'off'
+
+import:
+  bond:
+    - table: JTD_BOND_ALL
+      source: import/JTD_BOND_ALL/*
+    - table: JTD_BOND_FX
+      source: import/JTD_BOND_FX/*
+    - table: JTD_BOND_IR
+      source: import/JTD_BOND_IR/*
