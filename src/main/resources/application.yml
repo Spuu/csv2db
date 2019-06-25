@@ -10,7 +10,7 @@ spring:
         order_inserts: true
         generate_statistics: true
         jdbc:
-          batch-size: 100
+          batch_size: 1000
 
     hibernate:
       ddl-auto: create-drop
