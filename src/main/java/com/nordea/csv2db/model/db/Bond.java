@@ -1,6 +1,9 @@
 package com.nordea.csv2db.model.db;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.Column;
@@ -11,7 +14,10 @@ import java.util.Date;
 
 @MappedSuperclass
 @Data
-public abstract class Bond {
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class Bond {
     @Id
     @Column(name = "SCENARIO_DATE")
     @Type(type = "date")

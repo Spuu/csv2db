@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Bond {
+public class BondCsv {
     // "error","errorText","isin","mvUnitNotional","scenarioDate","scenarioSpecId","tradehubMessageId","type","zeroSimulation"
 
     @CsvBindByName

@@ -20,10 +20,6 @@ spring:
     console:
       enabled: true
 
-  batch:
-    job:
-      enabled: false
-
   main:
     banner-mode: 'off'
 

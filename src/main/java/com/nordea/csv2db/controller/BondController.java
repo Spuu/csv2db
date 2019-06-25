@@ -1,8 +1,8 @@
 package com.nordea.csv2db.controller;
 
-import com.nordea.csv2db.model.db.BondAll;
-import com.nordea.csv2db.model.db.BondFx;
-import com.nordea.csv2db.model.db.BondIR;
+import com.nordea.csv2db.model.db.JTD_BOND_ALL;
+import com.nordea.csv2db.model.db.JTD_BOND_FX;
+import com.nordea.csv2db.model.db.JTD_BOND_IR;
 import com.nordea.csv2db.repository.BondAllRepository;
 import com.nordea.csv2db.repository.BondFxRepository;
 import com.nordea.csv2db.repository.BondIRRepository;
@@ -27,17 +27,17 @@ public class BondController {
     }
 
     @GetMapping(path = "/bondAll")
-    List<BondAll> getBondAllList() {
+    List<JTD_BOND_ALL> getBondAllList() {
         return bondAllRepository.findAll();
     }
 
     @GetMapping(path = "/bondFx")
-    List<BondFx> getBondFxList() {
+    List<JTD_BOND_FX> getBondFxList() {
         return bondFxRepository.findAll();
     }
 
     @GetMapping(path = "/bondIR")
-    List<BondIR> getBondIrList() {
+    List<JTD_BOND_IR> getBondIrList() {
         return bondIRRepository.findAll();
     }
 }
